@@ -1,0 +1,24 @@
+      <STRUCT Name="cont_fyros_island">
+        <ATOM Name="name" Value="continent_fyros_island"/>
+        <ATOM Name="contname" Value="fyros_island"/>
+        <ATOM Name="bitmap" Value="fyros_island_full_map.png"/>
+        <ATOM Name="xmin" Value="21120"/>
+        <ATOM Name="ymin" Value="-24960"/>
+        <ATOM Name="xmax" Value="25920"/>
+        <ATOM Name="ymax" Value="-23840"/>
+        <ARRAY Name="children">
+          <STRUCT>
+            <ATOM Name="name" Value="region_fyros_island1PvP 3"/>
+            <ATOM Name="click zone name" Value="region_fyros_island1PvP 3"/>
+          </STRUCT>
+          <STRUCT>
+            <ATOM Name="name" Value="region_fyros_island2"/>
+            <ATOM Name="click zone name" Value="region_fyros_island2"/>
+          </STRUCT>
+          <STRUCT>
+            <ATOM Name="name" Value="region_fyros_island3"/>
+            <ATOM Name="click zone name" Value="region_fyros_island3"/>
+          </STRUCT>
+        </ARRAY>
+      </STRUCT>
+

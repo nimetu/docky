@@ -1,0 +1,56 @@
+# ------------------------------------------------------------------------------
+# SCREEN KEYBINDINGS
+# ------------------------------------------------------------------------------
+
+setenv LD_LIBRARY_PATH $LD_LIBRARY_PATH_SCREEN
+setenv RUN_SERVICE $RYZOM_SCRIPTS/service_launcher.sh
+
+caption always "%{= kw}%-w%{= gW}%n %t%{-}%+w %-= - %Y-%m-%d %C:%s"
+
+# Remove some stupid / dangerous key bindings
+bind ^k
+#bind L
+bind ^\
+# Make them better
+bind \\ quit
+bind K kill
+bind I login on
+bind O login off
+
+screen -t aes        $RUN_SERVICE aes        ryzom_admin_service         -C. -L. --nobreak --fulladminname=admin_executor_service --shortadminname=AES
+screen -t bms_master $RUN_SERVICE bms_master ryzom_backup_service        -C. -L. --nobreak --writepid -P49990
+screen -t egs        $RUN_SERVICE egs        ryzom_entities_game_service -C. -L. --nobreak --writepid
+screen -t gpms       $RUN_SERVICE gpms       ryzom_gpm_service           -C. -L. --nobreak --writepid
+screen -t ios        $RUN_SERVICE ios        ryzom_ios_service           -C. -L. --nobreak --writepid
+screen -t rns        $RUN_SERVICE rns        ryzom_naming_service        -C. -L. --nobreak --writepid
+screen -t rws        $RUN_SERVICE rws        ryzom_welcome_service       -C. -L. --nobreak --writepid
+screen -t ts         $RUN_SERVICE ts         ryzom_tick_service          -C. -L. --nobreak --writepid
+screen -t ms         $RUN_SERVICE ms         ryzom_mirror_service        -C. -L. --nobreak --writepid
+
+# ============ ais start ===========
+screen -t ais_newby  $RUN_SERVICE ais_newbyland  ryzom_ai_service -C. -L. -Nais_newbyland  --nobreak --writepid -mCommon:Newbieland:Post
+#screen -t ais_newby $RUN_SERVICE ais_newbieland ryzom_ai_service -C. -L. -Nais_newbieland --nobreak --writepid -mCommon:Newbieland:Post
+#screen -t ais_fy    $RUN_SERVICE ais_fyros      ryzom_ai_service -C. -L. -Nais_fyros      --nobreak --writepid -mCommon:Indoors:Fyros:FyrosNewbie:FyrosIsland:R2Desert:Post
+#screen -t ais_pr    $RUN_SERVICE ais_roots      ryzom_ai_service -C. -L. -Nais_roots      --nobreak --writepid -mCommon:Bagne:Nexus:RouteGouffre:Sources:Terre:Kitiniere:R2Roots:Post
+#screen -t ais_zo    $RUN_SERVICE ais_zorai      ryzom_ai_service -C. -L. -Nais_zorai      --nobreak --writepid -mCommon:Indoors:Zorai:ZoraiNewbie:ZoraiIsland:R2Jungle:Post
+#screen -t ais_ma    $RUN_SERVICE ais_matis      ryzom_ai_service -C. -L. -Nais_matis      --nobreak --writepid -mCommon:Indoors:Matis:MatisNewbie:MatisIsland:R2Forest:Post
+#screen -t ais_tr    $RUN_SERVICE ais_tryker     ryzom_ai_service -C. -L. -Nais_tryker     --nobreak --writepid -mCommon:Indoors:Tryker:TrykerNewbie:TrykerIsland:R2Lakes:Post
+# ============ ais stop ============
+
+screen -t mfs        $RUN_SERVICE mfs ryzom_mail_forum_service      -C. -L. --nobreak --writepid
+screen -t su         $RUN_SERVICE su  ryzom_shard_unifier_service   -C. -L. --nobreak --writepid
+screen -t fes        $RUN_SERVICE fes ryzom_frontend_service        -C. -L. --nobreak --writepid
+screen -t sbs        $RUN_SERVICE sbs ryzom_session_browser_service -C. -L. --nobreak --writepid
+screen -t lgs        $RUN_SERVICE lgs ryzom_logger_service          -C. -L. --nobreak --writepid
+screen -t ras        $RUN_SERVICE ras ryzom_admin_service           -C. -L. --nobreak --writepid --fulladminname=admin_service --shortadminname=AS
+
+# disabled services
+# FIXME: ais_newbyland is from RyzomCore (no -N and name typo)
+#screen -t ais_newbyland $RUN_SERVICE ais_newbyland ryzom_ai_service -C. -L. --nobreak --writepid -mCommon:Newbieland:Post
+#screen -t bms_pd_master $RUN_SERVICE bms_pd_master ryzom_backup_service -C. -L. --nobreak --writepid -P49992
+#screen -t mos           $RUN_SERVICE mos           ryzom_monitor_service -C. -L. --nobreak --writepid
+#screen -t pdss          $RUN_SERVICE pdss          ryzom_pd_support_service -C. -L. --nobreak --writepid
+
+# switch back to AES screen
+select 0
+

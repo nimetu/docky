@@ -1,0 +1,90 @@
+version: '3.4'
+
+networks:
+  default:
+
+services:
+  shard01:
+    image: ryzom/server:latest
+    build:
+      context: ./docker/ryzom-server
+    # batchstart - start shard, compile on first run
+    # monitor - just show log.log, skip clone/compile/shard start
+    command: batchstart
+    working_dir: /srv/ryzom
+    restart: on-failure
+    domainname: ryzomcore.local
+    hostname: shard01
+    networks:
+      default:
+        aliases:
+          - shard01.ryzomcore.local
+    # shard _may_ try to contact these
+    extra_hosts:
+      - "shard.ryzom.com:127.0.0.1"
+      - "chat.ryzom.com:127.0.0.1"
+      - "app.ryzom.com:127.0.0.1"
+      - "api.ryzom.com:127.0.0.1"
+    environment:
+      MYSQL_HOST: db.ryzomcore.local
+      MYSQL_PWD: ryzom-mysql-root-password
+      # shard name from {RYZOM_ROOT}/shards/{DOMAIN}/
+      DOMAIN: shard01
+      JOBS: 4
+    # client needs access to FS:47851/udp port
+    ports:
+      - '127.0.0.1:47851:47851/udp'
+    # cap_add/security_op is needed for gdb to run inside container
+    cap_add:
+      - SYS_PTRACE
+    security_opt:
+      - seccomp=unconfined
+    volumes:
+      - ./shard-data:/srv/ryzom
+
+  db:
+    image: ryzom/mariadb:latest
+    build:
+      context: ./docker/mariadb
+    environment:
+      MYSQL_ROOT_PASSWORD: ryzom-mysql-root-password
+    restart: on-failure
+    networks:
+      default:
+        aliases:
+          - db.ryzomcore.local
+    volumes:
+      - ./shard-data/mariadb/my.cnf:/etc/mysql/conf.d/99-custom.cnf:ro
+      - ./shard-data/mariadb/initdb.d:/docker-entrypoint-initdb.d:ro
+      - ./shard-data/mariadb/lib:/var/lib/mysql
+      - ./shard-data/mariadb/log:/var/log/mysql
+
+  php:
+    image: ryzom/php:latest
+    build:
+      context: ./docker/php
+    restart: on-failure
+    networks:
+      default:
+        aliases:
+          - php.ryzomcore.local
+    volumes:
+      - ./shard-data/php/php.ini:/usr/local/etc/php/conf.d/00-php.ini:ro
+      - ./shard-data/www:/var/www
+
+  web:
+    image: ryzom/nginx:latest
+    build:
+      context: ./docker/nginx
+    ports:
+      - '127.0.0.1:8081:8081'
+    restart: on-failure
+    networks:
+      default:
+        aliases:
+          - web.ryzomcore.local
+    volumes:
+      - ./shard-data/nginx/phpfpm.conf:/etc/nginx/phpfpm.conf:ro
+      - ./shard-data/nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./shard-data/www/public:/var/www/public:ro
+
