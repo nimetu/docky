@@ -349,6 +349,753 @@
             </PROPERTY>
           </CHILD>
           <CHILD TYPE="CPrimPoint">
+            <PT X="10200.704102" Y="-11700.041992" Z="0.000000"/>
+            <ANGLE VALUE="-6.430448"/>
+            <PROPERTY TYPE="string_array">
+              <NAME>chat_parameters</NAME>
+              <STRING>shop : TRYKER_CRAFT_ACTION</STRING>
+              <STRING>shop : characteristics_seller</STRING>
+            </PROPERTY>
+            <PROPERTY TYPE="string">
+              <NAME>class</NAME>
+              <STRING>npc_bot</STRING>
+            </PROPERTY>
+            <PROPERTY TYPE="string_array">
+              <NAME>equipment</NAME>
+              <STRING>CHANDS : 1</STRING>
+              <STRING>CBODY : 3</STRING>
+              <STRING>CLEGS : 3</STRING>
+              <STRING>CFEETS : 3</STRING>
+              <STRING>CARMS : 1</STRING>
+            </PROPERTY>
+            <PROPERTY TYPE="string">
+              <NAME>is_stuck</NAME>
+              <STRING>true</STRING>
+            </PROPERTY>
+            <PROPERTY TYPE="string">
+              <NAME>name</NAME>
+              <STRING>tyker_craft$fct_c_trainer$</STRING>
+            </PROPERTY>
+            <PROPERTY TYPE="string">
+              <NAME>sheet_client</NAME>
+              <STRING>trfb1</STRING>
+            </PROPERTY>
+            <CHILD TYPE="CPrimAlias">
+              <ALIAS VALUE="142"/>
+              <PROPERTY TYPE="string">
+                <NAME>class</NAME>
+                <STRING>alias</STRING>
+              </PROPERTY>
+              <PROPERTY TYPE="string">
+                <NAME>name</NAME>
+                <STRING>alias</STRING>
+              </PROPERTY>
+            </CHILD>
+          </CHILD>
+          <CHILD TYPE="CPrimPoint">
+            <PT X="10201.704102" Y="-11700.041992" Z="0.000000"/>
+            <ANGLE VALUE="-6.430448"/>
+            <PROPERTY TYPE="string_array">
+              <NAME>chat_parameters</NAME>
+              <STRING>shop : TRYKER_FIGHT_ACTION</STRING>
+              <STRING>shop : characteristics_seller</STRING>
+            </PROPERTY>
+            <PROPERTY TYPE="string">
+              <NAME>class</NAME>
+              <STRING>npc_bot</STRING>
+            </PROPERTY>
+            <PROPERTY TYPE="string_array">
+              <NAME>equipment</NAME>
+              <STRING>CHANDS : 1</STRING>
+              <STRING>CBODY : 3</STRING>
+              <STRING>CLEGS : 3</STRING>
+              <STRING>CFEETS : 3</STRING>
+              <STRING>CARMS : 1</STRING>
+            </PROPERTY>
+            <PROPERTY TYPE="string">
+              <NAME>is_stuck</NAME>
+              <STRING>true</STRING>
+            </PROPERTY>
+            <PROPERTY TYPE="string">
+              <NAME>name</NAME>
+              <STRING>tryker_fight$fct_f_trainer$</STRING>
+            </PROPERTY>
+            <PROPERTY TYPE="string">
+              <NAME>sheet_client</NAME>
+              <STRING>trfb1</STRING>
+            </PROPERTY>
+            <CHILD TYPE="CPrimAlias">
+              <ALIAS VALUE="1257"/>
+              <PROPERTY TYPE="string">
+                <NAME>class</NAME>
+                <STRING>alias</STRING>
+              </PROPERTY>
+              <PROPERTY TYPE="string">
+                <NAME>name</NAME>
+                <STRING>alias</STRING>
+              </PROPERTY>
+            </CHILD>
+          </CHILD>
+          <CHILD TYPE="CPrimPoint">
+            <PT X="10202.704102" Y="-11700.041992" Z="0.000000"/>
+            <ANGLE VALUE="-6.430448"/>
+            <PROPERTY TYPE="string_array">
+              <NAME>chat_parameters</NAME>
+              <STRING>shop : TRYKER_MAGIC_ACTION</STRING>
+              <STRING>shop : characteristics_seller</STRING>
+            </PROPERTY>
+            <PROPERTY TYPE="string">
+              <NAME>class</NAME>
+              <STRING>npc_bot</STRING>
+            </PROPERTY>
+            <PROPERTY TYPE="string_array">
+              <NAME>equipment</NAME>
+              <STRING>CHANDS : 1</STRING>
+              <STRING>CBODY : 3</STRING>
+              <STRING>CLEGS : 3</STRING>
+              <STRING>CFEETS : 3</STRING>
+              <STRING>CARMS : 1</STRING>
+            </PROPERTY>
+            <PROPERTY TYPE="string">
+              <NAME>is_stuck</NAME>
+              <STRING>true</STRING>
+            </PROPERTY>
+            <PROPERTY TYPE="string">
+              <NAME>name</NAME>
+              <STRING>tryker_magic$fct_m_trainer$</STRING>
+            </PROPERTY>
+            <PROPERTY TYPE="string">
+              <NAME>sheet_client</NAME>
+              <STRING>trfb1</STRING>
+            </PROPERTY>
+            <CHILD TYPE="CPrimAlias">
+              <ALIAS VALUE="1258"/>
+              <PROPERTY TYPE="string">
+                <NAME>class</NAME>
+                <STRING>alias</STRING>
+              </PROPERTY>
+              <PROPERTY TYPE="string">
+                <NAME>name</NAME>
+                <STRING>alias</STRING>
+              </PROPERTY>
+            </CHILD>
+          </CHILD>
+          <CHILD TYPE="CPrimPoint">
+            <PT X="10203.704102" Y="-11700.041992" Z="0.000000"/>
+            <ANGLE VALUE="-6.430448"/>
+            <PROPERTY TYPE="string_array">
+              <NAME>chat_parameters</NAME>
+              <STRING>shop : TRYKER_HARVEST_ACTION</STRING>
+              <STRING>shop : characteristics_seller</STRING>
+            </PROPERTY>
+            <PROPERTY TYPE="string">
+              <NAME>class</NAME>
+              <STRING>npc_bot</STRING>
+            </PROPERTY>
+            <PROPERTY TYPE="string_array">
+              <NAME>equipment</NAME>
+              <STRING>CHANDS : 1</STRING>
+              <STRING>CBODY : 3</STRING>
+              <STRING>CLEGS : 3</STRING>
+              <STRING>CFEETS : 3</STRING>
+              <STRING>CARMS : 1</STRING>
+            </PROPERTY>
+            <PROPERTY TYPE="string">
+              <NAME>is_stuck</NAME>
+              <STRING>true</STRING>
+            </PROPERTY>
+            <PROPERTY TYPE="string">
+              <NAME>name</NAME>
+              <STRING>tryker_harvest$fct_h_trainer$</STRING>
+            </PROPERTY>
+            <PROPERTY TYPE="string">
+              <NAME>sheet_client</NAME>
+              <STRING>trfb1</STRING>
+            </PROPERTY>
+            <CHILD TYPE="CPrimAlias">
+              <ALIAS VALUE="1259"/>
+              <PROPERTY TYPE="string">
+                <NAME>class</NAME>
+                <STRING>alias</STRING>
+              </PROPERTY>
+              <PROPERTY TYPE="string">
+                <NAME>name</NAME>
+                <STRING>alias</STRING>
+              </PROPERTY>
+            </CHILD>
+          </CHILD>
+          <CHILD TYPE="CPrimPoint">
+            <PT X="10200.704102" Y="-11710.041992" Z="0.000000"/>
+            <ANGLE VALUE="-6.430448"/>
+            <PROPERTY TYPE="string_array">
+              <NAME>chat_parameters</NAME>
+              <STRING>shop : ZORAI_CRAFT_ACTION</STRING>
+              <STRING>shop : characteristics_seller</STRING>
+            </PROPERTY>
+            <PROPERTY TYPE="string">
+              <NAME>class</NAME>
+              <STRING>npc_bot</STRING>
+            </PROPERTY>
+            <PROPERTY TYPE="string_array">
+              <NAME>equipment</NAME>
+              <STRING>CHANDS : 1</STRING>
+              <STRING>CBODY : 3</STRING>
+              <STRING>CLEGS : 3</STRING>
+              <STRING>CFEETS : 3</STRING>
+              <STRING>CARMS : 1</STRING>
+            </PROPERTY>
+            <PROPERTY TYPE="string">
+              <NAME>is_stuck</NAME>
+              <STRING>true</STRING>
+            </PROPERTY>
+            <PROPERTY TYPE="string">
+              <NAME>name</NAME>
+              <STRING>zorai_craft$fct_c_trainer$</STRING>
+            </PROPERTY>
+            <PROPERTY TYPE="string">
+              <NAME>sheet_client</NAME>
+              <STRING>zofb1</STRING>
+            </PROPERTY>
+            <CHILD TYPE="CPrimAlias">
+              <ALIAS VALUE="1260"/>
+              <PROPERTY TYPE="string">
+                <NAME>class</NAME>
+                <STRING>alias</STRING>
+              </PROPERTY>
+              <PROPERTY TYPE="string">
+                <NAME>name</NAME>
+                <STRING>alias</STRING>
+              </PROPERTY>
+            </CHILD>
+          </CHILD>
+          <CHILD TYPE="CPrimPoint">
+            <PT X="10201.704102" Y="-11710.041992" Z="0.000000"/>
+            <ANGLE VALUE="-6.430448"/>
+            <PROPERTY TYPE="string_array">
+              <NAME>chat_parameters</NAME>
+              <STRING>shop : ZORAI_FIGHT_ACTION</STRING>
+              <STRING>shop : characteristics_seller</STRING>
+            </PROPERTY>
+            <PROPERTY TYPE="string">
+              <NAME>class</NAME>
+              <STRING>npc_bot</STRING>
+            </PROPERTY>
+            <PROPERTY TYPE="string_array">
+              <NAME>equipment</NAME>
+              <STRING>CHANDS : 1</STRING>
+              <STRING>CBODY : 3</STRING>
+              <STRING>CLEGS : 3</STRING>
+              <STRING>CFEETS : 3</STRING>
+              <STRING>CARMS : 1</STRING>
+            </PROPERTY>
+            <PROPERTY TYPE="string">
+              <NAME>is_stuck</NAME>
+              <STRING>true</STRING>
+            </PROPERTY>
+            <PROPERTY TYPE="string">
+              <NAME>name</NAME>
+              <STRING>zorai_fight$fct_f_trainer$</STRING>
+            </PROPERTY>
+            <PROPERTY TYPE="string">
+              <NAME>sheet_client</NAME>
+              <STRING>zofb1</STRING>
+            </PROPERTY>
+            <CHILD TYPE="CPrimAlias">
+              <ALIAS VALUE="1261"/>
+              <PROPERTY TYPE="string">
+                <NAME>class</NAME>
+                <STRING>alias</STRING>
+              </PROPERTY>
+              <PROPERTY TYPE="string">
+                <NAME>name</NAME>
+                <STRING>alias</STRING>
+              </PROPERTY>
+            </CHILD>
+          </CHILD>
+          <CHILD TYPE="CPrimPoint">
+            <PT X="10202.704102" Y="-11710.041992" Z="0.000000"/>
+            <ANGLE VALUE="-6.430448"/>
+            <PROPERTY TYPE="string_array">
+              <NAME>chat_parameters</NAME>
+              <STRING>shop : ZORAI_MAGIC_ACTION</STRING>
+              <STRING>shop : characteristics_seller</STRING>
+            </PROPERTY>
+            <PROPERTY TYPE="string">
+              <NAME>class</NAME>
+              <STRING>npc_bot</STRING>
+            </PROPERTY>
+            <PROPERTY TYPE="string_array">
+              <NAME>equipment</NAME>
+              <STRING>CHANDS : 1</STRING>
+              <STRING>CBODY : 3</STRING>
+              <STRING>CLEGS : 3</STRING>
+              <STRING>CFEETS : 3</STRING>
+              <STRING>CARMS : 1</STRING>
+            </PROPERTY>
+            <PROPERTY TYPE="string">
+              <NAME>is_stuck</NAME>
+              <STRING>true</STRING>
+            </PROPERTY>
+            <PROPERTY TYPE="string">
+              <NAME>name</NAME>
+              <STRING>zorai_mgic$fct_m_trainer$</STRING>
+            </PROPERTY>
+            <PROPERTY TYPE="string">
+              <NAME>sheet_client</NAME>
+              <STRING>zofb1</STRING>
+            </PROPERTY>
+            <CHILD TYPE="CPrimAlias">
+              <ALIAS VALUE="1262"/>
+              <PROPERTY TYPE="string">
+                <NAME>class</NAME>
+                <STRING>alias</STRING>
+              </PROPERTY>
+              <PROPERTY TYPE="string">
+                <NAME>name</NAME>
+                <STRING>alias</STRING>
+              </PROPERTY>
+            </CHILD>
+          </CHILD>
+          <CHILD TYPE="CPrimPoint">
+            <PT X="10203.704102" Y="-11710.041992" Z="0.000000"/>
+            <ANGLE VALUE="-6.430448"/>
+            <PROPERTY TYPE="string_array">
+              <NAME>chat_parameters</NAME>
+              <STRING>shop : ZORAI_HARVEST_ACTION</STRING>
+              <STRING>shop : characteristics_seller</STRING>
+            </PROPERTY>
+            <PROPERTY TYPE="string">
+              <NAME>class</NAME>
+              <STRING>npc_bot</STRING>
+            </PROPERTY>
+            <PROPERTY TYPE="string_array">
+              <NAME>equipment</NAME>
+              <STRING>CHANDS : 1</STRING>
+              <STRING>CBODY : 3</STRING>
+              <STRING>CLEGS : 3</STRING>
+              <STRING>CFEETS : 3</STRING>
+              <STRING>CARMS : 1</STRING>
+            </PROPERTY>
+            <PROPERTY TYPE="string">
+              <NAME>is_stuck</NAME>
+              <STRING>true</STRING>
+            </PROPERTY>
+            <PROPERTY TYPE="string">
+              <NAME>name</NAME>
+              <STRING>zorai_harvest$fct_h_trainer$</STRING>
+            </PROPERTY>
+            <PROPERTY TYPE="string">
+              <NAME>sheet_client</NAME>
+              <STRING>zofb1</STRING>
+            </PROPERTY>
+            <CHILD TYPE="CPrimAlias">
+              <ALIAS VALUE="1263"/>
+              <PROPERTY TYPE="string">
+                <NAME>class</NAME>
+                <STRING>alias</STRING>
+              </PROPERTY>
+              <PROPERTY TYPE="string">
+                <NAME>name</NAME>
+                <STRING>alias</STRING>
+              </PROPERTY>
+            </CHILD>
+          </CHILD>
+          <CHILD TYPE="CPrimPoint">
+            <PT X="10200.704102" Y="-11720.041992" Z="0.000000"/>
+            <ANGLE VALUE="-6.430448"/>
+            <PROPERTY TYPE="string_array">
+              <NAME>chat_parameters</NAME>
+              <STRING>shop : MATIS_CRAFT_ACTION</STRING>
+              <STRING>shop : characteristics_seller</STRING>
+            </PROPERTY>
+            <PROPERTY TYPE="string">
+              <NAME>class</NAME>
+              <STRING>npc_bot</STRING>
+            </PROPERTY>
+            <PROPERTY TYPE="string_array">
+              <NAME>equipment</NAME>
+              <STRING>CHANDS : 1</STRING>
+              <STRING>CBODY : 3</STRING>
+              <STRING>CLEGS : 3</STRING>
+              <STRING>CFEETS : 3</STRING>
+              <STRING>CARMS : 1</STRING>
+            </PROPERTY>
+            <PROPERTY TYPE="string">
+              <NAME>is_stuck</NAME>
+              <STRING>true</STRING>
+            </PROPERTY>
+            <PROPERTY TYPE="string">
+              <NAME>name</NAME>
+              <STRING>matis_craft$fct_c_trainer$</STRING>
+            </PROPERTY>
+            <PROPERTY TYPE="string">
+              <NAME>sheet_client</NAME>
+              <STRING>mafb1</STRING>
+            </PROPERTY>
+            <CHILD TYPE="CPrimAlias">
+              <ALIAS VALUE="1264"/>
+              <PROPERTY TYPE="string">
+                <NAME>class</NAME>
+                <STRING>alias</STRING>
+              </PROPERTY>
+              <PROPERTY TYPE="string">
+                <NAME>name</NAME>
+                <STRING>alias</STRING>
+              </PROPERTY>
+            </CHILD>
+          </CHILD>
+          <CHILD TYPE="CPrimPoint">
+            <PT X="10201.704102" Y="-11720.041992" Z="0.000000"/>
+            <ANGLE VALUE="-6.430448"/>
+            <PROPERTY TYPE="string_array">
+              <NAME>chat_parameters</NAME>
+              <STRING>shop : MATIS_FIGHT_ACTION</STRING>
+              <STRING>shop : characteristics_seller</STRING>
+            </PROPERTY>
+            <PROPERTY TYPE="string">
+              <NAME>class</NAME>
+              <STRING>npc_bot</STRING>
+            </PROPERTY>
+            <PROPERTY TYPE="string_array">
+              <NAME>equipment</NAME>
+              <STRING>CHANDS : 1</STRING>
+              <STRING>CBODY : 3</STRING>
+              <STRING>CLEGS : 3</STRING>
+              <STRING>CFEETS : 3</STRING>
+              <STRING>CARMS : 1</STRING>
+            </PROPERTY>
+            <PROPERTY TYPE="string">
+              <NAME>is_stuck</NAME>
+              <STRING>true</STRING>
+            </PROPERTY>
+            <PROPERTY TYPE="string">
+              <NAME>name</NAME>
+              <STRING>matis_fight$fct_f_trainer$</STRING>
+            </PROPERTY>
+            <PROPERTY TYPE="string">
+              <NAME>sheet_client</NAME>
+              <STRING>mafb1</STRING>
+            </PROPERTY>
+            <CHILD TYPE="CPrimAlias">
+              <ALIAS VALUE="1265"/>
+              <PROPERTY TYPE="string">
+                <NAME>class</NAME>
+                <STRING>alias</STRING>
+              </PROPERTY>
+              <PROPERTY TYPE="string">
+                <NAME>name</NAME>
+                <STRING>alias</STRING>
+              </PROPERTY>
+            </CHILD>
+          </CHILD>
+          <CHILD TYPE="CPrimPoint">
+            <PT X="10202.704102" Y="-11720.041992" Z="0.000000"/>
+            <ANGLE VALUE="-6.430448"/>
+            <PROPERTY TYPE="string_array">
+              <NAME>chat_parameters</NAME>
+              <STRING>shop : MATIS_MAGIC_ACTION</STRING>
+              <STRING>shop : characteristics_seller</STRING>
+            </PROPERTY>
+            <PROPERTY TYPE="string">
+              <NAME>class</NAME>
+              <STRING>npc_bot</STRING>
+            </PROPERTY>
+            <PROPERTY TYPE="string_array">
+              <NAME>equipment</NAME>
+              <STRING>CHANDS : 1</STRING>
+              <STRING>CBODY : 3</STRING>
+              <STRING>CLEGS : 3</STRING>
+              <STRING>CFEETS : 3</STRING>
+              <STRING>CARMS : 1</STRING>
+            </PROPERTY>
+            <PROPERTY TYPE="string">
+              <NAME>is_stuck</NAME>
+              <STRING>true</STRING>
+            </PROPERTY>
+            <PROPERTY TYPE="string">
+              <NAME>name</NAME>
+              <STRING>matis_magic$fct_m_trainer$</STRING>
+            </PROPERTY>
+            <PROPERTY TYPE="string">
+              <NAME>sheet_client</NAME>
+              <STRING>mafb1</STRING>
+            </PROPERTY>
+            <CHILD TYPE="CPrimAlias">
+              <ALIAS VALUE="1266"/>
+              <PROPERTY TYPE="string">
+                <NAME>class</NAME>
+                <STRING>alias</STRING>
+              </PROPERTY>
+              <PROPERTY TYPE="string">
+                <NAME>name</NAME>
+                <STRING>alias</STRING>
+              </PROPERTY>
+            </CHILD>
+          </CHILD>
+          <CHILD TYPE="CPrimPoint">
+            <PT X="10203.704102" Y="-11720.041992" Z="0.000000"/>
+            <ANGLE VALUE="-6.430448"/>
+            <PROPERTY TYPE="string_array">
+              <NAME>chat_parameters</NAME>
+              <STRING>shop : MATIS_HARVEST_ACTION</STRING>
+              <STRING>shop : characteristics_seller</STRING>
+            </PROPERTY>
+            <PROPERTY TYPE="string">
+              <NAME>class</NAME>
+              <STRING>npc_bot</STRING>
+            </PROPERTY>
+            <PROPERTY TYPE="string_array">
+              <NAME>equipment</NAME>
+              <STRING>CHANDS : 1</STRING>
+              <STRING>CBODY : 3</STRING>
+              <STRING>CLEGS : 3</STRING>
+              <STRING>CFEETS : 3</STRING>
+              <STRING>CARMS : 1</STRING>
+            </PROPERTY>
+            <PROPERTY TYPE="string">
+              <NAME>is_stuck</NAME>
+              <STRING>true</STRING>
+            </PROPERTY>
+            <PROPERTY TYPE="string">
+              <NAME>name</NAME>
+              <STRING>matis_harvest$fct_h_trainer$</STRING>
+            </PROPERTY>
+            <PROPERTY TYPE="string">
+              <NAME>sheet_client</NAME>
+              <STRING>mafb1</STRING>
+            </PROPERTY>
+            <CHILD TYPE="CPrimAlias">
+              <ALIAS VALUE="1267"/>
+              <PROPERTY TYPE="string">
+                <NAME>class</NAME>
+                <STRING>alias</STRING>
+              </PROPERTY>
+              <PROPERTY TYPE="string">
+                <NAME>name</NAME>
+                <STRING>alias</STRING>
+              </PROPERTY>
+            </CHILD>
+          </CHILD>
+          <CHILD TYPE="CPrimPoint">
+            <PT X="10200.704102" Y="-11730.041992" Z="0.000000"/>
+            <ANGLE VALUE="-6.430448"/>
+            <PROPERTY TYPE="string_array">
+              <NAME>chat_parameters</NAME>
+              <STRING>shop : FYROS_CRAFT_ACTION</STRING>
+              <STRING>shop : characteristics_seller</STRING>
+            </PROPERTY>
+            <PROPERTY TYPE="string">
+              <NAME>class</NAME>
+              <STRING>npc_bot</STRING>
+            </PROPERTY>
+            <PROPERTY TYPE="string_array">
+              <NAME>equipment</NAME>
+              <STRING>CHANDS : 1</STRING>
+              <STRING>CBODY : 3</STRING>
+              <STRING>CLEGS : 3</STRING>
+              <STRING>CFEETS : 3</STRING>
+              <STRING>CARMS : 1</STRING>
+            </PROPERTY>
+            <PROPERTY TYPE="string">
+              <NAME>is_stuck</NAME>
+              <STRING>true</STRING>
+            </PROPERTY>
+            <PROPERTY TYPE="string">
+              <NAME>name</NAME>
+              <STRING>fyros_craft$fct_c_trainer$</STRING>
+            </PROPERTY>
+            <PROPERTY TYPE="string">
+              <NAME>sheet_client</NAME>
+              <STRING>fyfb1</STRING>
+            </PROPERTY>
+            <CHILD TYPE="CPrimAlias">
+              <ALIAS VALUE="1268"/>
+              <PROPERTY TYPE="string">
+                <NAME>class</NAME>
+                <STRING>alias</STRING>
+              </PROPERTY>
+              <PROPERTY TYPE="string">
+                <NAME>name</NAME>
+                <STRING>alias</STRING>
+              </PROPERTY>
+            </CHILD>
+          </CHILD>
+          <CHILD TYPE="CPrimPoint">
+            <PT X="10201.704102" Y="-11730.041992" Z="0.000000"/>
+            <ANGLE VALUE="-6.430448"/>
+            <PROPERTY TYPE="string_array">
+              <NAME>chat_parameters</NAME>
+              <STRING>shop : FYROS_FIGHT_ACTION</STRING>
+              <STRING>shop : characteristics_seller</STRING>
+            </PROPERTY>
+            <PROPERTY TYPE="string">
+              <NAME>class</NAME>
+              <STRING>npc_bot</STRING>
+            </PROPERTY>
+            <PROPERTY TYPE="string_array">
+              <NAME>equipment</NAME>
+              <STRING>CHANDS : 1</STRING>
+              <STRING>CBODY : 3</STRING>
+              <STRING>CLEGS : 3</STRING>
+              <STRING>CFEETS : 3</STRING>
+              <STRING>CARMS : 1</STRING>
+            </PROPERTY>
+            <PROPERTY TYPE="string">
+              <NAME>is_stuck</NAME>
+              <STRING>true</STRING>
+            </PROPERTY>
+            <PROPERTY TYPE="string">
+              <NAME>name</NAME>
+              <STRING>fyros_fight$fct_f_trainer$</STRING>
+            </PROPERTY>
+            <PROPERTY TYPE="string">
+              <NAME>sheet_client</NAME>
+              <STRING>fyfb1</STRING>
+            </PROPERTY>
+            <CHILD TYPE="CPrimAlias">
+              <ALIAS VALUE="1269"/>
+              <PROPERTY TYPE="string">
+                <NAME>class</NAME>
+                <STRING>alias</STRING>
+              </PROPERTY>
+              <PROPERTY TYPE="string">
+                <NAME>name</NAME>
+                <STRING>alias</STRING>
+              </PROPERTY>
+            </CHILD>
+          </CHILD>
+          <CHILD TYPE="CPrimPoint">
+            <PT X="10202.704102" Y="-11730.041992" Z="0.000000"/>
+            <ANGLE VALUE="-6.430448"/>
+            <PROPERTY TYPE="string_array">
+              <NAME>chat_parameters</NAME>
+              <STRING>shop : FYROS_MAGIC_ACTION</STRING>
+              <STRING>shop : characteristics_seller</STRING>
+            </PROPERTY>
+            <PROPERTY TYPE="string">
+              <NAME>class</NAME>
+              <STRING>npc_bot</STRING>
+            </PROPERTY>
+            <PROPERTY TYPE="string_array">
+              <NAME>equipment</NAME>
+              <STRING>CHANDS : 1</STRING>
+              <STRING>CBODY : 3</STRING>
+              <STRING>CLEGS : 3</STRING>
+              <STRING>CFEETS : 3</STRING>
+              <STRING>CARMS : 1</STRING>
+            </PROPERTY>
+            <PROPERTY TYPE="string">
+              <NAME>is_stuck</NAME>
+              <STRING>true</STRING>
+            </PROPERTY>
+            <PROPERTY TYPE="string">
+              <NAME>name</NAME>
+              <STRING>fyros_magic$fct_m_trainer$</STRING>
+            </PROPERTY>
+            <PROPERTY TYPE="string">
+              <NAME>sheet_client</NAME>
+              <STRING>fyfb1</STRING>
+            </PROPERTY>
+            <CHILD TYPE="CPrimAlias">
+              <ALIAS VALUE="1270"/>
+              <PROPERTY TYPE="string">
+                <NAME>class</NAME>
+                <STRING>alias</STRING>
+              </PROPERTY>
+              <PROPERTY TYPE="string">
+                <NAME>name</NAME>
+                <STRING>alias</STRING>
+              </PROPERTY>
+            </CHILD>
+          </CHILD>
+          <CHILD TYPE="CPrimPoint">
+            <PT X="10203.704102" Y="-11730.041992" Z="0.000000"/>
+            <ANGLE VALUE="-6.430448"/>
+            <PROPERTY TYPE="string_array">
+              <NAME>chat_parameters</NAME>
+              <STRING>shop : FYROS_HARVEST_ACTION</STRING>
+              <STRING>shop : characteristics_seller</STRING>
+            </PROPERTY>
+            <PROPERTY TYPE="string">
+              <NAME>class</NAME>
+              <STRING>npc_bot</STRING>
+            </PROPERTY>
+            <PROPERTY TYPE="string_array">
+              <NAME>equipment</NAME>
+              <STRING>CHANDS : 1</STRING>
+              <STRING>CBODY : 3</STRING>
+              <STRING>CLEGS : 3</STRING>
+              <STRING>CFEETS : 3</STRING>
+              <STRING>CARMS : 1</STRING>
+            </PROPERTY>
+            <PROPERTY TYPE="string">
+              <NAME>is_stuck</NAME>
+              <STRING>true</STRING>
+            </PROPERTY>
+            <PROPERTY TYPE="string">
+              <NAME>name</NAME>
+              <STRING>fyros_harvest$fct_h_trainer$</STRING>
+            </PROPERTY>
+            <PROPERTY TYPE="string">
+              <NAME>sheet_client</NAME>
+              <STRING>fyfb1</STRING>
+            </PROPERTY>
+            <CHILD TYPE="CPrimAlias">
+              <ALIAS VALUE="1271"/>
+              <PROPERTY TYPE="string">
+                <NAME>class</NAME>
+                <STRING>alias</STRING>
+              </PROPERTY>
+              <PROPERTY TYPE="string">
+                <NAME>name</NAME>
+                <STRING>alias</STRING>
+              </PROPERTY>
+            </CHILD>
+          </CHILD>
+          <CHILD TYPE="CPrimPoint">
+            <PT X="10280.704102" Y="-11710.041992" Z="0.000000"/>
+            <ANGLE VALUE="-6.430448"/>
+            <PROPERTY TYPE="string_array">
+              <NAME>chat_parameters</NAME>
+              <STRING>shop : guild_creator</STRING>
+            </PROPERTY>
+            <PROPERTY TYPE="string">
+              <NAME>class</NAME>
+              <STRING>npc_bot</STRING>
+            </PROPERTY>
+            <PROPERTY TYPE="string_array">
+              <NAME>equipment</NAME>
+              <STRING>CHANDS : 1</STRING>
+              <STRING>CBODY : 3</STRING>
+              <STRING>CLEGS : 3</STRING>
+              <STRING>CFEETS : 3</STRING>
+              <STRING>CARMS : 1</STRING>
+            </PROPERTY>
+            <PROPERTY TYPE="string">
+              <NAME>is_stuck</NAME>
+              <STRING>true</STRING>
+            </PROPERTY>
+            <PROPERTY TYPE="string">
+              <NAME>name</NAME>
+              <STRING>guild_creator$fct_rm_merchant$</STRING>
+            </PROPERTY>
+            <PROPERTY TYPE="string">
+              <NAME>sheet_client</NAME>
+              <STRING>company_of_the_drill_loge_master_z_h_b1</STRING>
+            </PROPERTY>
+            <CHILD TYPE="CPrimAlias">
+              <ALIAS VALUE="1272"/>
+              <PROPERTY TYPE="string">
+                <NAME>class</NAME>
+                <STRING>alias</STRING>
+              </PROPERTY>
+              <PROPERTY TYPE="string">
+                <NAME>name</NAME>
+                <STRING>alias</STRING>
+              </PROPERTY>
+            </CHILD>
+          </CHILD>
+          <CHILD TYPE="CPrimPoint">
             <PT X="10299.704102" Y="-11724.041992" Z="0.000000"/>
             <ANGLE VALUE="-6.430448"/>
             <PROPERTY TYPE="string_array">
