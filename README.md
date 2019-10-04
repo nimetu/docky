@@ -77,7 +77,7 @@ ie, in `shard01`  shell (clone and compile),
 ```
 mkdir -p $RYZOM_ROOT/src/ryzom-core.hg
 hg clone https://bitbucket.org/ryzom/ryzomcore $RYZOM_ROOT/src/ryzom-core.hg/
-hg update develop
+hg update patches-from-atys
 /srv/ryzom/build.sh --core
 ```
 

@@ -40,7 +40,7 @@ if [ "${1:-}" = "batchstart" ]; then
 		mkdir -p $RYZOM_ROOT/src/ryzom-core.hg
 		hg clone -v https://bitbucket.org/ryzom/ryzomcore $RYZOM_ROOT/src/ryzom-core.hg/
 		cd $RYZOM_ROOT/src/ryzom-core.hg
-		hg update develop
+		hg update patches-from-atys
 	fi
 
 	if [ ! -f $RYZOM_ROOT/server/sbin/ryzom_admin_service ]; then
