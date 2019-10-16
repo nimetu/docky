@@ -27,7 +27,7 @@ DROP TABLE IF EXISTS `domain`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `domain` (
-  `domain_id` int(10) unsigned NOT NULL,
+  `domain_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `domain_name` varchar(32) NOT NULL DEFAULT '',
   `status` enum('ds_close','ds_dev','ds_restricted','ds_open') NOT NULL DEFAULT 'ds_dev',
   `patch_version` int(10) unsigned NOT NULL DEFAULT 0,
@@ -71,7 +71,7 @@ DROP TABLE IF EXISTS `user`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `user` (
-  `UId` int(10) NOT NULL,
+  `UId` int(10) NOT NULL AUTO_INCREMENT,
   `Login` varchar(64) NOT NULL DEFAULT '',
   `State` enum('Offline','Online') NOT NULL DEFAULT 'Offline',
   `Privilege` varchar(255) NOT NULL DEFAULT '',
