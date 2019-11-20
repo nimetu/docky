@@ -59,6 +59,7 @@ RUN apt-get update -y && apt-get install -y --no-install-recommends \
 	valgrind \
 	vim \
 	wget \
+	xdelta \
 	xsltproc \
 	zlib1g-dev \
 	&& apt-get clean && rm -rf /var/lib/apt/lists/*

@@ -87,4 +87,5 @@ services:
       - ./shard-data/nginx/phpfpm.conf:/etc/nginx/phpfpm.conf:ro
       - ./shard-data/nginx/nginx.conf:/etc/nginx/nginx.conf:ro
       - ./shard-data/www/public:/var/www/public:ro
+      - ./shard-data/www/patch_client/patch:/var/www/public/patch:ro
 

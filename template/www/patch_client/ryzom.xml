@@ -1,0 +1,23 @@
+<xml>
+	<_Categories>
+		<_Category>
+			<_Name type="STRING" value="main"/>
+			<_IsOptional type="SINT32" value="0"/>
+		</_Category>
+		<_Category>
+			<_Name type="STRING" value="unpacked"/>
+			<_IsOptional type="SINT32" value="0"/>
+			<_UnpackTo type="STRING" value="./"/>
+			<_IsIncremental type="SINT32" value="0"/>
+			<_Files type="STRING" value="root.bnp"/>
+		</_Category>
+		<_Category>
+			<_Name type="STRING" value="optional"/>
+		</_Category>
+	</_Categories>
+	<_IndexFileName type="STRING" value="ryzom.hist"/>
+	<_PatchDirectory type="STRING" value="patch/"/>
+	<_BnpDirectory type="STRING" value="bnp/"/>
+	<_RefDirectory type="STRING" value="ref/"/>
+	<_NextVersionFile type="STRING" value="patch/ryzom_docky.version"/>
+</xml>

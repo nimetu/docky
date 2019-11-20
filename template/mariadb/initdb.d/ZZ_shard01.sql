@@ -18,8 +18,8 @@ INSERT INTO `domain` VALUES (
 	'ryzom_docky',                              -- domain_name
 	'ds_open',                                  -- status (ds_close, *ds_dev, ds_restricted, ds_open)
 	1,                                          -- patch_version
-	'shard01.ryzomcore.local:23001',            -- backup_patch_url
-	NULL,                                       -- patch_urls (text)
+	'http://shard01.ryzomcore.local:23001',     -- backup_patch_url (if patch_urls fails)
+	'http://shard01.ryzomcore.local:8081/patch',-- patch_urls (space separated)
 	'shard01.ryzomcore.local:49998',            -- login_address
 	'shard01.ryzomcore.local:49999',            -- session_manager_address
 	'ring_shard01',                             -- ring_db_name

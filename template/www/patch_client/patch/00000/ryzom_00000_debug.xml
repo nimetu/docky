@@ -1,0 +1,26 @@
+<xml>
+	<_Files>
+		<_Files>
+			<_FileName type="STRING" value="root.bnp"/>
+		</_Files>
+		<_Files>
+			<_FileName type="STRING" value="root_.ref"/>
+		</_Files>
+	</_Files>
+	<_Categories>
+		<_Category>
+			<_Name type="STRING" value="main"/>
+			<_IsOptional type="SINT32" value="0"/>
+		</_Category>
+		<_Category>
+			<_Name type="STRING" value="unpacked"/>
+			<_IsOptional type="SINT32" value="0"/>
+			<_UnpackTo type="STRING" value="./"/>
+			<_IsIncremental type="SINT32" value="0"/>
+			<_Files type="STRING" value="root.bnp"/>
+		</_Category>
+		<_Category>
+			<_Name type="STRING" value="optional"/>
+		</_Category>
+	</_Categories>
+</xml>
