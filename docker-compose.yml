@@ -72,18 +72,24 @@ services:
       - ./shard-data/php/php.ini:/usr/local/etc/php/conf.d/00-php.ini:ro
       - ./shard-data/www:/var/www
 
+  # if DOMAINS are left out (empty), no certificates are created/modified.
+  # /etc/nginx/certs can be read-only if certificates are created manually.
   web:
     image: ryzom/nginx:latest
     build:
       context: ./docker/nginx
     ports:
       - '127.0.0.1:8081:8081'
+      - '127.0.0.1:8481:8481'
     restart: on-failure
+    environment:
+      DOMAINS: localhost shard01.ryzomcore.local
     networks:
       default:
         aliases:
           - web.ryzomcore.local
     volumes:
+      - ./shard-data/nginx/certs:/etc/nginx/certs
       - ./shard-data/nginx/phpfpm.conf:/etc/nginx/phpfpm.conf:ro
       - ./shard-data/nginx/nginx.conf:/etc/nginx/nginx.conf:ro
       - ./shard-data/www/public:/var/www/public:ro

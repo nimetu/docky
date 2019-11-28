@@ -14,7 +14,8 @@
 All `docker-compose` commands must be run inside directory where `docker-compose.yml` is located.
 
 ## container ip:port
-- `web` makes `127.0.0.1:8081/tcp` available for nel admin, ams, ingame login, patching
+- `web` makes `127.0.0.1:8081/tcp` (http) available for nel admin, ams, ingame login, patching
+- `web` makes `127.0.0.1:8481/tcp` (https) available using certificate from `shard-data/nginx/certs` (generates self-signed certificate if needed)
 - `shard01` makes `127.0.0.147851/udp` available for client login.
 - `db` has no outside ports
 - `php` has no outside ports
