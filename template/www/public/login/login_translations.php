@@ -18,9 +18,11 @@ $ErrMsgs[1000]['de'] = 'Error';
 define('ERR_LOGIN_NOT_SET',     -1001);
 define('ERR_LOGIN_EMPTY',       -1002);
 define('ERR_PASSWORD_NOT_SET',  -1003);
+define('ERR_INVALID_HASH_ALGO', -1004);
 $ErrMsgs[ERR_LOGIN_NOT_SET]['en'] = 'Login not set';
 $ErrMsgs[ERR_LOGIN_EMPTY]['en'] = 'Empty login';
 $ErrMsgs[ERR_PASSWORD_NOT_SET]['en'] = 'Password not set';
+$ErrMsgs[ERR_INVALID_HASH_ALGO]['en'] = 'Invalid password hash algorithm';
 
 // Common public error messages
 $msgMisconfiguredClient['en'] = 'Your client might be misconfigured, please contact support';

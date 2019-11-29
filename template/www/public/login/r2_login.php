@@ -16,15 +16,27 @@
 
     function get_salt($password)
     {
-        if ($password[0] == '$')
-        {
-            $salt = substr($password, 0, 19);
-        }
-        else
-        {
-            $salt = substr($password, 0, 2);
-        }
-        return $salt;
+		if (substr($password, 0, 3) !== '$6$') {
+			err_log('Unknown hash algorithm ('.substr($password, 0, 4).'...)');
+			return false;
+		}
+
+		// $6$<salt>$<hash>
+		// $6$rounds=???$<salt>$<hash>
+		$tmp = explode('$', $password);
+		// 0 == empty, 1 == '6', 2 == <salt>
+		// 0 == empty, 1 == '6', 2 == rounds=???, 3 == <salt>
+		if (!isset($tmp[2]) || (strpos($tmp[2], 'rounds=') === 0 && !isset($tmp[3]))) {
+			err_log('Unknown $6$ hash format ('.substr($password, 0, 19).'...)');
+			return false;
+		}
+
+		$index = 3;
+		if (strpos($tmp[2], 'rounds=') === 0) {
+			$index++;
+		}
+
+		return join('$', array_slice($tmp, 0, $index));
     }
 
 	// see errorMsg
@@ -147,6 +159,12 @@
 		$logFile->logStr("PHP ERROR/$errno $errmsg ($filename:$linenum)");
 		$logFile->logStr("PHP CALLSTACK/" . print_r(debug_backtrace(), TRUE));
 		// Never die after an error
+	}
+
+	function err_log($errmsg)
+	{
+		$logFile = new CwwwLog();
+		$logFile->logStr($errmsg);
 	}
 
 	if (!isset($_GET['cmd']))
@@ -363,6 +381,9 @@
 		{
 			$row = mysqli_fetch_assoc ($result);
 			$salt = get_salt($row["Password"]);
+			if ($salt === false) {
+				die(errorMsgBlock(ERR_INVALID_HASH_ALGO));
+			}
 			if (($cp && $row["Password"] == $password) || (!$cp && $row["Password"] == crypt($password, $salt)))
 			{
 				// Store the real login (with correct case)
@@ -482,9 +503,9 @@
 		{
 			if ($AcceptUnknownUser)
 			{
-				// just accept the client and return a default salk
-				echo "1:AA";
-				die;
+				// return random salt - client expects SHA512 '$6$' format
+				// take last chars from password_hash() (format is $2y$10$<salt><hash>)
+				die('1:$6$'.substr(password_hash('', PASSWORD_BCRYPT), -16));
 			}
 			else
 			{
@@ -524,6 +545,9 @@
 		{
 			$res_array = mysqli_fetch_assoc($result);
 			$salt = get_salt($res_array['Password']);
+			if ($salt === false) {
+				die(errorMsgBlock(ERR_INVALID_HASH_ALGO));
+			}
 		}
 
 		echo "1:".$salt;
