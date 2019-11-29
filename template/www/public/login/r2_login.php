@@ -164,6 +164,16 @@
 		$cp = $_GET['cp'];
 	}
 
+	// TODO: client really should send these using POST
+	// make sure values exists and are string
+	foreach(array('login', 'password', 'clientApplication') as $key) {
+		if (!isset($_GET[$key]) || !is_string($_GET[$key])) {
+			$_GET[$key] = '';
+		} else {
+			$_GET[$key] = trim($_GET[$key]);
+		}
+	}
+
 	$submittedLang = isset($_GET['lg']) ? $_GET['lg'] : 'unknown';
 	if (isset($_GET['dbg']) && ($_GET['dbg'] == 1))
 		$DisplayDbg = true;
@@ -271,6 +281,13 @@
 		global $DBHost, $DBUserName, $DBPassword, $DBName, $AcceptUnknownUser;
 
 		setMsgLanguage($lang);
+
+		if (empty($login)) {
+			die(errorMsgBlock(ERR_LOGIN_EMPTY));
+		}
+		if (empty($password)) {
+			die(errorMsgBlock(ERR_PASSWORD_NOT_SET));
+		}
 
 		$link = mysqli_connect($DBHost, $DBUserName, $DBPassword) or die (errorMsgBlock(3004, 'main', $DBHost, $DBUserName));
 		mysqli_select_db ($link, $DBName) or die (errorMsgBlock(3005, 'main', $DBName, $DBHost, $DBUserName));
@@ -449,6 +466,10 @@
 		global $AcceptUnknownUser;
 
 		setMsgLanguage($lang);
+
+		if (empty($login)) {
+			die(errorMsgBlock(ERR_LOGIN_NOT_SET));
+		}
 
 		$link = mysqli_connect($DBHost, $DBUserName, $DBPassword) or die (errorMsgBlock(3004, 'main', $DBHost, $DBUserName));
 		mysqli_select_db ($link, $DBName) or die (errorMsgBlock(3005, 'main', $DBName, $DBHost, $DBUserName));
