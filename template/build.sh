@@ -3,10 +3,14 @@
 set -ueo pipefail
 
 # CPU cores from docker-compose.yml
-export MAKEFLAGS="-j${JOBS}"
+export MAKEFLAGS="-j${JOBS:-`nproc`}"
 
 # directory for this script
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+
+if [ -z ${RYZOM_ROOT:-} ]; then
+	RYZOM_ROOT=$DIR
+fi
 
 # FIXME: create paths relative this this script so this can also be used to compile client in host mode
 # FIXME: must refuse to run install in host mode
@@ -86,7 +90,7 @@ while [ $# -gt 0 ]; do
 		;;
 	--database-plr)
 		echo "Generate egs/database_plr.h"
-		SOURCE=$RYZOM_ROOT/src/ryzom-core.hg/code/
+		SOURCE=$RYZOM_ROOT/src/ryzom-core.git/code
 		xsltproc --stringparam filename database --stringparam bank PLR --stringparam output header --stringparam side server \
 			--output $SOURCE/ryzom/server/src/entities_game_service/database_plr.h \
 					 $SOURCE/ryzom/common/src/game_share/generate_client_db.xslt \
@@ -127,7 +131,7 @@ if [ $BUILD_CORE = true ]; then
 	-DWITH_SYMBOLS=ON
 	"
 
-	SOURCE=$RYZOM_ROOT/src/ryzom-core.hg/code
+	SOURCE=$RYZOM_ROOT/src/ryzom-core.git/code
 	if [ $ENABLE_STATIC = true ]; then
 		BUILD_ROOT=$RYZOM_ROOT/src/build-core-static
 		USE_STATIC_LIBS=true
@@ -155,7 +159,7 @@ if [ ${BUILD_CLIENT} = true ]; then
 	-DWITH_STLPORT=OFF
 	-DWITH_SYMBOLS=ON
 	"
-	SOURCE=$RYZOM_ROOT/src/ryzom-core.hg/code
+	SOURCE=$RYZOM_ROOT/src/ryzom-core.git/code
 	BUILD_ROOT=$RYZOM_ROOT/src/build-client-static
 	USE_STATIC_LIBS=true
 	do_build
@@ -164,7 +168,6 @@ fi
 # no --nel, --server not supported for now
 exit
 
-# live server support libs
 if [ "${BUILD_NEL}" = true ]; then
 	CMAKE_OPTIONS="
 	-DCMAKE_BUILD_TYPE=Release

@@ -39,9 +39,15 @@ All containers are running under UID=1000/ryzom, GID=1000/ryzom.
 
 Initial run of `shard01` will clone and compile ryzomcore server. After that shard will start.
 
+First run (packed_sheets are being generated) seems to have kind of race condition and client reports that
+shard is in maintenance mode. Restart shard using shard service console.
+
 - `docker-compose up`
   shard01 will clone and compile server on first run.
   This will take some time and docker-compose logs might not show anything at first.
+
+  Clone is done with `git clone -depth 1` to get only last commit and skip all the rest.
+  Run `git pull --unshallow` on sources if you want full commit history.
 
 Compiling will be done using `WITH_SYMBOLS=ON` for better stacktrace messages.
 
@@ -91,7 +97,10 @@ Parallel jobs can be set using JOBS env variable (JOBS=-j4 is default and set fr
 JOBS=-j2 /srv/ryzom/build.sh --core
 ```
 
-TODO: Client should be compiled on host using `shard-data/build.sh` script.
+## building client
+
+Client could be compiled on host using `shard-data/build.sh --client` if all needed dependencies are present.
+Client binary is kept in `shard-data/src/build-client-static/bin` and not installed.
 
 ## restarting shard
 

@@ -15,6 +15,7 @@ RUN apt-get update -y && apt-get install -y --no-install-recommends \
 	curl \
 	debhelper \
 	gdb \
+	git \
 	less \
 	libboost-filesystem1.67-dev \
 	libboost-filesystem1.67.0 \
@@ -47,7 +48,6 @@ RUN apt-get update -y && apt-get install -y --no-install-recommends \
 	ltrace \
 	mariadb-client \
 	mc \
-	mercurial \
 	nano \
 	net-tools \
 	rrdtool \
@@ -90,8 +90,6 @@ WORKDIR /srv/ryzom
 USER ryzom
 
 RUN \
-	# mercurial ssl3 handshake error with bitbucket
-	echo -e "[hostsecurity]\napi.media.atlassian.com:ciphers = DEFAULT@SECLEVEL=1\n" > $HOME/.hgrc && \
 	# db host/pass is set from env
 	echo -e "[client]\nuser=root\nhost=db\n" > $HOME/.my.cnf
 

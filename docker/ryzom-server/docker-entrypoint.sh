@@ -36,12 +36,16 @@ fi
 ##############################################################################
 # clone / compile if needed
 if [ "${1:-}" = "batchstart" ]; then
-	if [ ! -d $RYZOM_ROOT/src/ryzom-core.hg ]; then
-		mkdir -p $RYZOM_ROOT/src/ryzom-core.hg
-		hg clone -v https://bitbucket.org/ryzom/ryzomcore $RYZOM_ROOT/src/ryzom-core.hg/
-		cd $RYZOM_ROOT/src/ryzom-core.hg
-		hg update patches-from-atys
+	if [ ! -d $RYZOM_ROOT/src/ryzom-core.git ]; then
+		mkdir -p $RYZOM_ROOT/src/ryzom-core.git
+		#git clone --depth 1 --branch ryzomclassic-develop https://github.com/ryzom/ryzomcore.git $RYZOM_ROOT/src/ryzom-core.git/
+		git clone --depth 1 --branch hg/hotfix/patches-from-atys https://github.com/ryzom/ryzomcore.git $RYZOM_ROOT/src/ryzom-core.git/
 	fi
+
+	#if [ ! -d $RYZOM_ROOT/src/ryzom-server.git ]; then
+	#	mkdir -p $RYZOM_ROOT/src/ryzom-server.git
+	#	git clone --depth 1 https://gitlab.com/ryzom/ryzom-server.git $RYZOM_ROOT/src/ryzom-server.git/
+	#fi
 
 	if [ ! -f $RYZOM_ROOT/server/sbin/ryzom_admin_service ]; then
 		echo "Compiling shard..."
