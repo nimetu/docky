@@ -1,0 +1,7 @@
+version: '3.4'
+
+# run shard01 in 'monitor' instead of 'batchstart' mode
+services:
+  shard01:
+    command: monitor
+

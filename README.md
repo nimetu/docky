@@ -11,6 +11,9 @@
 	- shard address is `shard01.ryzomcore.local`
 	- db address is `db.ryzomcore.local`
 
+If you need to do local modifications to `docker-compose.yml` file, then you can use `docker-compose.override.yml` file.
+See `docker-compose.override-dist.yml` for example.
+
 All `docker-compose` commands must be run inside directory where `docker-compose.yml` is located.
 
 ## container ip:port

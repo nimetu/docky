@@ -1,0 +1,4 @@
+/shard-data/
+/docker-compose.override.yml
+*.swp
+
