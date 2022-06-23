@@ -191,7 +191,7 @@ if [ "${BUILD_NEL}" = true ]; then
 	-DWITH_SYMBOLS=OFF
 	"
 	USE_STATIC_LIBS=false
-	SOURCE=$RYZOM_ROOT/src/ryzom-core.hg/code
+	SOURCE=$RYZOM_ROOT/src/ryzom-core.git/code
 	BUILD_ROOT=$RYZOM_ROOT/src/build-nel
 	echo "Compiling nel"
 
@@ -221,7 +221,7 @@ if [ "${BUILD_SERVER}" = true ]; then
 	-DCMAKE_CXX_FLGAS=\"-DHAVE_MONGO \${CMAKE_CXX_FLAGS}\"
 	-DNEL_DIR=$NEL_DIR
 	"
-	SOURCE=$RYZOM_ROOT/src/ryzom-server.hg
+	SOURCE=$RYZOM_ROOT/src/ryzom-server.git
 	BUILD_ROOT=$RYZOM_ROOT/src/build-server
 	USE_STATIC_LIBS=false
 	echo "Compiling server"

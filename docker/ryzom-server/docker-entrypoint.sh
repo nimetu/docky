@@ -39,7 +39,7 @@ if [ "${1:-}" = "batchstart" ]; then
 	if [ ! -d $RYZOM_ROOT/src/ryzom-core.git ]; then
 		mkdir -p $RYZOM_ROOT/src/ryzom-core.git
 		#git clone --depth 1 --branch ryzomclassic-develop https://github.com/ryzom/ryzomcore.git $RYZOM_ROOT/src/ryzom-core.git/
-		git clone --depth 1 --branch hg/hotfix/patches-from-atys https://github.com/ryzom/ryzomcore.git $RYZOM_ROOT/src/ryzom-core.git/
+		git clone --depth 1 --branch main/gingo-test https://github.com/ryzom/ryzomcore.git $RYZOM_ROOT/src/ryzom-core.git/
 	fi
 
 	#if [ ! -d $RYZOM_ROOT/src/ryzom-server.git ]; then
