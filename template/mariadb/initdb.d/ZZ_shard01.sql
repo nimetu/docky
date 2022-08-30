@@ -32,6 +32,7 @@ INSERT INTO `domain` VALUES (
 INSERT INTO `permission` VALUES (
 	1,                                          -- PermissionId
 	1,                                          -- UId
+	'ryzom_docky',                              -- ClientApplication
 	1,                                          -- DomainId !
 	-1,                                         -- ShardId
 	'OPEN'                                      -- AccessPrivilege (*OPEN, DEV, RESTRICTED)

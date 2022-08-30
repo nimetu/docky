@@ -54,6 +54,7 @@ DROP TABLE IF EXISTS `permission`;
 CREATE TABLE `permission` (
   `PermissionId` int(11) NOT NULL AUTO_INCREMENT,
   `UId` int(10) unsigned NOT NULL DEFAULT 0,
+  `ClientApplication` char(64) NOT NULL default 'r2',
   `DomainId` int(11) NOT NULL DEFAULT -1,
   `ShardId` int(10) NOT NULL DEFAULT -1,
   `AccessPrivilege` set('OPEN','DEV','RESTRICTED') NOT NULL DEFAULT 'OPEN',
