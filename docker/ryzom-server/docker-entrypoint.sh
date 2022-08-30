@@ -42,14 +42,15 @@ if [ "${1:-}" = "batchstart" ]; then
 		git clone --depth 1 --branch main/gingo-test https://github.com/ryzom/ryzomcore.git $RYZOM_ROOT/src/ryzom-core.git/
 	fi
 
-	#if [ ! -d $RYZOM_ROOT/src/ryzom-server.git ]; then
-	#	mkdir -p $RYZOM_ROOT/src/ryzom-server.git
-	#	git clone --depth 1 https://gitlab.com/ryzom/ryzom-server.git $RYZOM_ROOT/src/ryzom-server.git/
-	#fi
+	if [ ! -d $RYZOM_ROOT/src/ryzom-server.git ]; then
+		mkdir -p $RYZOM_ROOT/src/ryzom-server.git
+		git clone --depth 1 https://gitlab.com/ryzom/ryzom-server.git $RYZOM_ROOT/src/ryzom-server.git/
+	fi
 
 	if [ ! -f $RYZOM_ROOT/server/sbin/ryzom_admin_service ]; then
 		echo "Compiling shard..."
 		$RYZOM_ROOT/build.sh --core
+		$RYZOM_ROOT/build.sh --server
 	fi
 
 	if [ ! -f "$RYZOM_ROOT/server/sbin/ryzom_admin_service" ]; then

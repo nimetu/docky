@@ -32,7 +32,6 @@ RUN apt-get update -y && apt-get install -y --no-install-recommends \
 	libluabind-dev \
 	liblzma-dev \
 	libmariadbclient-dev-compat \
-	libmongoclient-dev \
 	libopenal-dev \
 	libpng-dev \
 	libqt4-dev \
