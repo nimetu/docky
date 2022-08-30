@@ -90,7 +90,7 @@ while [ $# -gt 0 ]; do
 		;;
 	--database-plr)
 		echo "Generate egs/database_plr.h"
-		SOURCE=$RYZOM_ROOT/src/ryzom-core.git/code
+		SOURCE=$RYZOM_ROOT/src/ryzom-core.git
 		xsltproc --stringparam filename database --stringparam bank PLR --stringparam output header --stringparam side server \
 			--output $SOURCE/ryzom/server/src/entities_game_service/database_plr.h \
 					 $SOURCE/ryzom/common/src/game_share/generate_client_db.xslt \
@@ -131,7 +131,7 @@ if [ $BUILD_CORE = true ]; then
 	-DWITH_SYMBOLS=ON
 	"
 
-	SOURCE=$RYZOM_ROOT/src/ryzom-core.git/code
+	SOURCE=$RYZOM_ROOT/src/ryzom-core.git
 	if [ $ENABLE_STATIC = true ]; then
 		BUILD_ROOT=$RYZOM_ROOT/src/build-core-static
 		USE_STATIC_LIBS=true
@@ -159,7 +159,7 @@ if [ ${BUILD_CLIENT} = true ]; then
 	-DWITH_STLPORT=OFF
 	-DWITH_SYMBOLS=ON
 	"
-	SOURCE=$RYZOM_ROOT/src/ryzom-core.git/code
+	SOURCE=$RYZOM_ROOT/src/ryzom-core.git
 	BUILD_ROOT=$RYZOM_ROOT/src/build-client-static
 	USE_STATIC_LIBS=true
 	do_build
@@ -191,7 +191,7 @@ if [ "${BUILD_NEL}" = true ]; then
 	-DWITH_SYMBOLS=OFF
 	"
 	USE_STATIC_LIBS=false
-	SOURCE=$RYZOM_ROOT/src/ryzom-core.git/code
+	SOURCE=$RYZOM_ROOT/src/ryzom-core.git
 	BUILD_ROOT=$RYZOM_ROOT/src/build-nel
 	echo "Compiling nel"
 
