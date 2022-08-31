@@ -30,7 +30,6 @@ services:
       MYSQL_PWD: ryzom-mysql-root-password
       # shard name from {RYZOM_ROOT}/shards/{DOMAIN}/
       DOMAIN: shard01
-      JOBS: 4
     # client needs access to FS:47851/udp port
     ports:
       - '127.0.0.1:47851:47851/udp'

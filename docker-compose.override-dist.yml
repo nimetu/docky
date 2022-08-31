@@ -4,4 +4,6 @@ version: '3.4'
 services:
   shard01:
     command: monitor
+    environment:
+      JOBS: 1
 
