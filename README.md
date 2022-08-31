@@ -19,7 +19,7 @@ All `docker-compose` commands must be run inside directory where `docker-compose
 ## container ip:port
 - `web` makes `127.0.0.1:8081/tcp` (http) available for nel admin, ams, ingame login, patching
 - `web` makes `127.0.0.1:8481/tcp` (https) available using certificate from `shard-data/nginx/certs` (generates self-signed certificate if needed)
-- `shard01` makes `127.0.0.147851/udp` available for client login.
+- `shard01` makes `127.0.0.1:47851/udp` available for client login.
 - `db` has no outside ports
 - `php` has no outside ports
 
@@ -34,6 +34,8 @@ All `docker-compose` commands must be run inside directory where `docker-compose
 StartupHost = "shard01.ryzomcore.local:8081";
 Application = { "ryzom_docky", "./client_ryzom_r.exe", "./" };
 ```
+
+Both core and server are using `main/atys-live` branch, so it copy of live atys client with just client.cfg change will work.
 
 # running
 
@@ -81,19 +83,19 @@ If `shard01` is not running,
 
 ## manual clone/compile
 
-Clone ryzomcore sources into `shard-data/src/ryzom-core.hg` (in host) or `/srv/ryzom/src/ryzom-core.hg` (in shard01) directory.
+`/srv/ryzom/clone-and-build.sh` will clone nel and server sources if they already does not exist in `/srv/ryzom/src` directory.
 
-ie, in `shard01`  shell (clone and compile),
-```
-mkdir -p $RYZOM_ROOT/src/ryzom-core.hg
-hg clone https://bitbucket.org/ryzom/ryzomcore $RYZOM_ROOT/src/ryzom-core.hg/
-hg update patches-from-atys
-/srv/ryzom/build.sh --core
-```
+`/srv/ryzom/clone-and-build.sh` will also build nel and server if server binary is not found under `/srv/ryzom/server`.
+
+To force clone, delete `/srv/ryzom/ryzom-core.git` and/or `/srv/ryzom-server.git` directories.
+
+To force compiling, delete `/srv/ryzom/server` directory.
 
 ## building
 
-Server needs to be compiled inside `shard01` using `/srv/ryzom/build.sh --core` command.
+`/srv/ryzom/build.sh --core` command needs to be run when there is changes to `ryzom-core.git`.
+
+`/srv/ryzom/build.sh --server` command needs to be run when there is changes to `ryzom-server.git`.
 
 Parallel jobs can be set using JOBS env variable (JOBS=-j4 is default and set from `docker-compose.yml`)
 ```
