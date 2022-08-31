@@ -470,8 +470,8 @@
           format="u64" />
     <leaf name="ADD"
           sendto="EGS"
-          format="u16 u16 u16"
-          description="add an item from the bag(index_in_bag index_in_exchange quantity)" />
+          format="u16 u16 u16 u16"
+          description="add an item from the bag(inventory_src index_in_bag index_in_exchange quantity)" />
     <leaf name="REMOVE"
           sendto="EGS"
           format="u16"
@@ -553,6 +553,10 @@
           sendto="EGS"
           format="b"
           description="AFK command is sent to EGS" />
+      <leaf name="SELFKILL"
+          sendto="EGS"
+          format=""
+          description="client asks EGS to kill self" />
     <leaf name="RANDOM"
           sendto="EGS"
           format="s16 s16"
@@ -626,7 +630,7 @@
           description="Client buy object. param1: index in list. Param2: quantity" />
     <leaf name="SELL"
           sendto="EGS"
-          format="u8 u8 u16 u32"
+          format="u8 u16 u16 u32"
           description="Client sell item in: 1/ inventory id INVENTORIES::EInventory 2/ index 3/ quantity 4/ resale price" />
     <leaf name="DESTROY_ITEM"
           sendto="EGS"
