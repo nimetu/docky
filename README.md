@@ -85,21 +85,19 @@ If `shard01` is not running,
 
 `/srv/ryzom/clone-and-build.sh` will clone nel and server sources if they already does not exist in `/srv/ryzom/src` directory.
 
-`/srv/ryzom/clone-and-build.sh` will also build nel and server if server binary is not found under `/srv/ryzom/server`.
+`/srv/ryzom/clone-and-build.sh` will also build server if server binary is not found under `/srv/ryzom/server`.
 
-To force clone, delete `/srv/ryzom/ryzom-core.git` and/or `/srv/ryzom-server.git` directories.
+To force clone, delete `/srv/ryzom/ryzom-core.git` directory.
 
 To force compiling, delete `/srv/ryzom/server` directory.
 
 ## building
 
-`/srv/ryzom/build.sh --core` command needs to be run when there is changes to `ryzom-core.git`.
+Full compile and install is done with `/srv/ryzom/build.sh --server` command.
 
-`/srv/ryzom/build.sh --server` command needs to be run when there is changes to `ryzom-server.git`.
-
-Parallel jobs can be set using JOBS env variable (JOBS=-j4 is default and set from `docker-compose.yml`)
+Parallel jobs can be set using JOBS env variable. Default uses `nproc` command to user all cpu cores
 ```
-JOBS=-j2 /srv/ryzom/build.sh --core
+JOBS=-j2 /srv/ryzom/build.sh --server
 ```
 
 ## building client
