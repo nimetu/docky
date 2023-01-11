@@ -3,7 +3,8 @@
 set -e -u
 
 REPO=https://gitlab.com/ryzom/ryzom-core.git
-BRANCH=main/atys-live
+#BRANCH=main/atys-live
+BRANCH=156-compiling-server-after-server-code-merge
 
 DESTDIR=$RYZOM_ROOT/src/ryzom-core.git
 if [ ! -d ${NEL}/.git ]; then
